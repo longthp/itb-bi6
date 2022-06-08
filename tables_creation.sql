@@ -1,9 +1,5 @@
-CREATE DATABASE itb_bi6;
-USE itb_bi6;
-
-DROP TABLE IF EXISTS order_table;
-DROP TABLE IF EXISTS product_table;
-DROP TABLE IF EXISTS user_table;
+-- CREATE DATABASE itb_bi6;
+-- USE itb_bi6;
 
 CREATE TABLE order_table (
     order_id BIGINT,
