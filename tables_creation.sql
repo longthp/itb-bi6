@@ -1,3 +1,10 @@
+CREATE DATABASE itb_bi6;
+USE itb_bi6;
+
+DROP TABLE IF EXISTS order_table;
+DROP TABLE IF EXISTS product_table;
+DROP TABLE IF EXISTS user_table;
+
 CREATE TABLE order_table (
     order_id BIGINT,
     order_date DATE,
@@ -27,7 +34,7 @@ ALTER TABLE order_table
 ON DELETE SET NULL;
 
 INSERT INTO product_table VALUES
-(1, "bookks"), (2, "home_decor"), (3, "ultilities"), 
+(1, "books"), (2, "home_decor"), (3, "ultilities"), 
 (4, "food"), (5, "mom_and_baby"), (6, "electronics");
 
 INSERT INTO user_table VALUES
