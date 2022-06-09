@@ -25,5 +25,5 @@ WHERE
 
 ### WHERE clause
 > Filter customers from `"Whale"` and buy `"books"` in June, 2021.
-* `DATE_FORMAT()` converts all dates into "yyyy-mm"
+* `DATE_FORMAT()` converts all dates into "yyyy-mm".
 * `AND` clause for conditions.

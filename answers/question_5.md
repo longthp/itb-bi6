@@ -21,8 +21,8 @@ WHERE m.rnk = 1;
 
 ### WITH clause
 > `ROW_NUMBER()` windows function:
-* `ORDER BY` order_date
-* Add numbers to every `customer` partitions
+* `ORDER BY` order_date.
+* Add numbers to every `customer` partitions.
 
 	| user_id | user_name | order_value | rnk |
 	| :---: | :---: | :---: | :---: | 
