@@ -1,63 +1,26 @@
-# Business Intelligence Season 6 - Round 1
+# NEU_PhamThanhLong_BI2022_R01
+## Business Intelligence Season 6 - Round 1
 
-# Table of Contents
 | [Question 1](#question-1) | [Question 2](#question-2) | [Question 3](#question-3) | [Question 4](#question-4) | [Question 5](#question-5) | [Question 6](#question-6) | [Question 7](#question-7) |
-
-> Tables
-<details>
-	<summary>order_table</summary>
-
-| order_id | order_date | user_id | product_cate_id | order_value |
-| ---: | ---: | ---: | ---: | ---: |
-| 150151 | 01/05/2021 | 101 | 1 | 150000 |
-| 178151 | 06/05/2021 | 102 | 5 | 300000 |
-| 178629 | 06/07/2021 | 101 | 2 | 250000 |
-| 180053 | 01/07/2021 | 103 | 3 | 89000 |
-| 184235 | 10/08/2021 | 102 | 5 | 50000 |
-| 196325 | 27/05/2021 | 103 | 4 | 140000 |
-
-</details>
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 <br>
 
-<details>
-	<summary>product_table</summary>
-
-| product_cate_id | product_cate_name |
-| ---: | :--- |
-| 1 | books |
-| 2 | home_decor |
-| 3 | ultilities |
-| 4 | food |
-| 5 | mom_and_baby |
-| 6 | electronics |
-
-</details>
-<br>
-
-<details>
-	<summary>user_table</summary>
-
-| user_id | user_name | location | user_segment |
-| ---: | :--- | :--- | :--- |
-| 101 | A | HCM | Whale |
-| 102 | B | HN | Salon |
-| 103 | C | DN | Dolphin |
-| 104 | D | HCM | Whale |
-| 105 | E | HN | Dolphin |
-
-</details>
-<hr>
+* Database: `MySQL`<br>
+* Tools: `MySQL Workbench`
 
 ## Question 1
-> EER Diagram | Database: MySQL
+> EER Diagram
 
 <p align="center">
 	<img width="700" src="assets/db_diagram.png">
 <p>
 <br>
 
+* Mối liên hệ giữa `user_table` và `product_table` là `many-to-many` _(một người có thể mua nhiều sản phẩm, một sản phẩm có thể được mua bởi nhiều người)_.
+* Hai bảng trên được liên kết thông qua một bảng trung gian là `order_table`, với hai `FOREIGN KEYs` là `user_id` và `product_cate_id`.
+
 ## Question 2
-> Find customers who are from `"Whale"` and buy `"books"` in `June, 2021`.
+Lấy thông tin khách hàng thuộc phân khúc `Whale` và có mua `books` trong tháng 5, năm 2021.
 
 <details>
 	<summary>Answer:</summary>
@@ -90,7 +53,7 @@ WHERE
 
 ---
 ## Question 3
-> Find `total order value` for each `customer segments` and `product categories` from `August, 2021` till now.
+> Tính tổng giá trị đơn hàng theo **`từng ngành hàng`** và **`từng phân khúc khách hàng`** kể từ tháng 8 năm 2021 đến nay.
 
 <details>
 	<summary>Answer:</summary>
@@ -123,7 +86,7 @@ GROUP BY m.product_cate_name, m.user_segment;
 
 ---
 ## Question 4
-> Find customers with `second highest` `order counts` within their segments in `July, 2021`.
+> Lấy thông tin khách hàng có số lượng đơn hàng cao thứ hai tính trong vị trí địa lý (location) của họ trong tháng 7 năm 2021.
 
 <details>
 	<summary>Answer:</summary>
