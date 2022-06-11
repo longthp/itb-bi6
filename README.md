@@ -7,6 +7,7 @@
 
 * Database: `MySQL`<br>
 * Tools: `MySQL Workbench`
+* [Dummy values for calculation](sql/dummy_values.sql) (order_table_ext)
 
 ## Question 1
 > EER Diagram
@@ -53,7 +54,7 @@ WHERE
 
 ---
 ## Question 3
-> Tính tổng giá trị đơn hàng theo **`từng ngành hàng`** và **`từng phân khúc khách hàng`** kể từ tháng 8 năm 2021 đến nay.
+Tính tổng giá trị đơn hàng theo `từng ngành hàng` và `từng phân khúc khách hàng` kể từ tháng 8 năm 2021 đến nay.
 
 <details>
 	<summary>Answer:</summary>
@@ -86,7 +87,7 @@ GROUP BY m.product_cate_name, m.user_segment;
 
 ---
 ## Question 4
-> Lấy thông tin khách hàng có số lượng đơn hàng cao thứ hai tính trong vị trí địa lý (location) của họ trong tháng 7 năm 2021.
+Lấy thông tin khách hàng có `số lượng đơn hàng cao thứ hai` tính trong vị trí địa lý (location) của họ trong tháng 7 năm 2021.
 
 <details>
 	<summary>Answer:</summary>
@@ -138,7 +139,7 @@ WHERE rnk = 2;
 
 ---
 ## Question 5
-> Find `first order value` for each customers in `May, 2021`.
+Lấy giá trị đơn hàng `đầu tiên` của từng khách hàng trong tháng 5 năm 2021.
 
 <details>
 	<summary>Answer:</summary>
@@ -186,7 +187,7 @@ WHERE m.rnk = 1;
 
 ---
 ## Question 6
-> Calculate `incremental` `order counts` for every customer segments.
+Tính `số lượng đơn hàng lũy tiến` qua từng ngày trong tháng của từng phân khúc khách hàng.
 
 <details>
 	<summary>Answer:</summary>
@@ -224,7 +225,7 @@ FROM m;
 
 ---
 ## Question 7
-> Calculate `average time` between `first` and `second order` for every customers and segments.
+Tính `thời gian trung bình` giữa `đơn hàng đầu tiên` và `đơn hàng thứ hai` của các khách hàng trong `từng phân khúc khách hàng`.
 
 <details>
 	<summary>Answer:</summary>
