@@ -1,5 +1,5 @@
 # NEU_PhamThanhLong_BI2022_R01
-## Business Intelligence Season 6 - Round 1
+<br>
 
 | [Question 1](#question-1) | [Question 2](#question-2) | [Question 3](#question-3) | [Question 4](#question-4) | [Question 5](#question-5) | [Question 6](#question-6) | [Question 7](#question-7) |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
